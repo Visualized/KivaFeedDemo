@@ -38,16 +38,6 @@
                                              [self.tableView reloadData];
                                              
                                          }];
-    
-    [JSONHTTPClient getJSONFromURLWithString:@"url..."
-                                  completion:^(NSDictionary *json, JSONModelError *err) {
-                                      
-                                      NSError* error = nil;
-                                      _feed = [[KivaFeed alloc] initWithDictionary:json error:&error];
-                                      
-                                      [self.tableView reloadData];
-                                      
-                                  }];
 }
 
 #pragma mark - table methods
